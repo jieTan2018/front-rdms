@@ -200,7 +200,7 @@ export function getRoutes() {
             "path": "/user",
             "routes": [
               {
-                "name": "login",
+                "name": "登录",
                 "path": "/user/login",
                 "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__user__Login' */'/home/little/projects/rdms/front-rdms/src/pages/user/Login'), loading: LoadingComponent}),
                 "exact": true
@@ -215,21 +215,21 @@ export function getRoutes() {
       },
       {
         "path": "/welcome",
-        "name": "welcome",
+        "name": "欢迎",
         "icon": "smile",
         "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__Welcome' */'/home/little/projects/rdms/front-rdms/src/pages/Welcome'), loading: LoadingComponent}),
         "exact": true
       },
       {
         "path": "/admin",
-        "name": "admin",
+        "name": "管理页",
         "icon": "crown",
         "access": "canAdmin",
         "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__Admin' */'/home/little/projects/rdms/front-rdms/src/pages/Admin'), loading: LoadingComponent}),
         "routes": [
           {
             "path": "/admin/sub-page",
-            "name": "sub-page",
+            "name": "二级管理页",
             "icon": "smile",
             "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__Welcome' */'/home/little/projects/rdms/front-rdms/src/pages/Welcome'), loading: LoadingComponent}),
             "exact": true
@@ -241,7 +241,7 @@ export function getRoutes() {
         ]
       },
       {
-        "name": "list.table-list",
+        "name": "查询表格",
         "icon": "table",
         "path": "/list",
         "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__TableList' */'/home/little/projects/rdms/front-rdms/src/pages/TableList'), loading: LoadingComponent}),

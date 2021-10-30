@@ -11,8 +11,6 @@ import { getRoutes } from './core/routes';
 
 
 import '../global.less';
-import { _onCreate } from './plugin-locale/locale';
-_onCreate();
 
 const getClientRender = (args: { hot?: boolean; routes?: any[] } = {}) => plugin.applyPlugins({
   key: 'render',
