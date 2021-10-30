@@ -3,11 +3,11 @@ import {
   createIntl,
   IntlShape,
   MessageDescriptor,
-} from '/home/little/projects/front-rdms/node_modules/react-intl';
+} from '/home/little/projects/rdms/front-rdms/node_modules/react-intl';
 import { ApplyPluginsType } from 'umi';
 import { event, LANG_CHANGE_EVENT } from './locale';
 // @ts-ignore
-import warning from '/home/little/projects/front-rdms/node_modules/@umijs/plugin-locale/node_modules/warning/warning.js';
+import warning from '/home/little/projects/rdms/front-rdms/node_modules/@umijs/plugin-locale/node_modules/warning/warning.js';
 
 import { plugin } from '../core/plugin';
 
@@ -34,27 +34,27 @@ export {
   defineMessages,
   injectIntl,
   useIntl,
-} from '/home/little/projects/front-rdms/node_modules/react-intl';
+} from '/home/little/projects/rdms/front-rdms/node_modules/react-intl';
 
 let g_intl: IntlShape;
 
 const useLocalStorage = true;
 
-import lang_bnBD0 from "/home/little/projects/front-rdms/src/locales/bn-BD.ts";
+import lang_bnBD0 from "/home/little/projects/rdms/front-rdms/src/locales/bn-BD.ts";
 import enUS0 from 'antd/es/locale/en_US';
-import lang_enUS0 from "/home/little/projects/front-rdms/src/locales/en-US.ts";
+import lang_enUS0 from "/home/little/projects/rdms/front-rdms/src/locales/en-US.ts";
 import faIR0 from 'antd/es/locale/fa_IR';
-import lang_faIR0 from "/home/little/projects/front-rdms/src/locales/fa-IR.ts";
+import lang_faIR0 from "/home/little/projects/rdms/front-rdms/src/locales/fa-IR.ts";
 import idID0 from 'antd/es/locale/id_ID';
-import lang_idID0 from "/home/little/projects/front-rdms/src/locales/id-ID.ts";
+import lang_idID0 from "/home/little/projects/rdms/front-rdms/src/locales/id-ID.ts";
 import jaJP0 from 'antd/es/locale/ja_JP';
-import lang_jaJP0 from "/home/little/projects/front-rdms/src/locales/ja-JP.ts";
+import lang_jaJP0 from "/home/little/projects/rdms/front-rdms/src/locales/ja-JP.ts";
 import ptBR0 from 'antd/es/locale/pt_BR';
-import lang_ptBR0 from "/home/little/projects/front-rdms/src/locales/pt-BR.ts";
+import lang_ptBR0 from "/home/little/projects/rdms/front-rdms/src/locales/pt-BR.ts";
 import zhCN0 from 'antd/es/locale/zh_CN';
-import lang_zhCN0 from "/home/little/projects/front-rdms/src/locales/zh-CN.ts";
+import lang_zhCN0 from "/home/little/projects/rdms/front-rdms/src/locales/zh-CN.ts";
 import zhTW0 from 'antd/es/locale/zh_TW';
-import lang_zhTW0 from "/home/little/projects/front-rdms/src/locales/zh-TW.ts";
+import lang_zhTW0 from "/home/little/projects/rdms/front-rdms/src/locales/zh-TW.ts";
 
 export const localeInfo: {[key: string]: any} = {
   'bn-BD': {

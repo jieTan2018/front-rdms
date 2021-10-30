@@ -1,6 +1,6 @@
 // @ts-nocheck
 import React from 'react';
-import { ApplyPluginsType, dynamic } from '/home/little/projects/front-rdms/node_modules/umi/node_modules/@umijs/runtime';
+import { ApplyPluginsType, dynamic } from '/home/little/projects/rdms/front-rdms/node_modules/umi/node_modules/@umijs/runtime';
 import * as umiExports from './umiExports';
 import { plugin } from './plugin';
 import LoadingComponent from '@ant-design/pro-layout/es/PageLoading';
@@ -9,20 +9,20 @@ export function getRoutes() {
   const routes = [
   {
     "path": "/umi/plugin/openapi",
-    "component": dynamic({ loader: () => import(/* webpackChunkName: '.umi__plugin-openapi__openapi' */'/home/little/projects/front-rdms/src/.umi/plugin-openapi/openapi.tsx'), loading: LoadingComponent})
+    "component": dynamic({ loader: () => import(/* webpackChunkName: '.umi__plugin-openapi__openapi' */'/home/little/projects/rdms/front-rdms/src/.umi/plugin-openapi/openapi.tsx'), loading: LoadingComponent})
   },
   {
     "path": "/",
-    "component": dynamic({ loader: () => import(/* webpackChunkName: '.umi__plugin-layout__Layout' */'/home/little/projects/front-rdms/src/.umi/plugin-layout/Layout.tsx'), loading: LoadingComponent}),
+    "component": dynamic({ loader: () => import(/* webpackChunkName: '.umi__plugin-layout__Layout' */'/home/little/projects/rdms/front-rdms/src/.umi/plugin-layout/Layout.tsx'), loading: LoadingComponent}),
     "routes": [
       {
         "path": "/~demos/:uuid",
         "layout": false,
-        "wrappers": [dynamic({ loader: () => import(/* webpackChunkName: 'wrappers' */'/home/little/projects/front-rdms/node_modules/@umijs/preset-dumi/lib/theme/layout'), loading: LoadingComponent})],
+        "wrappers": [dynamic({ loader: () => import(/* webpackChunkName: 'wrappers' */'/home/little/projects/rdms/front-rdms/node_modules/@umijs/preset-dumi/lib/theme/layout'), loading: LoadingComponent})],
         "component": (props) => React.createElement(
         dynamic({
           loader: async () => {
-            const { default: getDemoRenderArgs } = await import(/* webpackChunkName: 'dumi_demos' */ '/home/little/projects/front-rdms/node_modules/@umijs/preset-dumi/lib/plugins/features/demo/getDemoRenderArgs');
+            const { default: getDemoRenderArgs } = await import(/* webpackChunkName: 'dumi_demos' */ '/home/little/projects/rdms/front-rdms/node_modules/@umijs/preset-dumi/lib/plugins/features/demo/getDemoRenderArgs');
             const { default: Previewer } = await import(/* webpackChunkName: 'dumi_demos' */ 'dumi-theme-default/es/builtins/Previewer.js');
             const { default: demos } = await import(/* webpackChunkName: 'dumi_demos' */ '@@/dumi/demos');
             const { usePrefersColor } = await import(/* webpackChunkName: 'dumi_demos' */ 'dumi/theme');
@@ -63,17 +63,17 @@ export function getRoutes() {
         "__dumiRoot": true,
         "layout": false,
         "path": "/~docs",
-        "wrappers": [dynamic({ loader: () => import(/* webpackChunkName: 'wrappers' */'/home/little/projects/front-rdms/node_modules/@umijs/preset-dumi/lib/theme/layout'), loading: LoadingComponent}), dynamic({ loader: () => import(/* webpackChunkName: 'wrappers' */'/home/little/projects/front-rdms/node_modules/dumi-theme-default/es/layout.js'), loading: LoadingComponent})],
+        "wrappers": [dynamic({ loader: () => import(/* webpackChunkName: 'wrappers' */'/home/little/projects/rdms/front-rdms/node_modules/@umijs/preset-dumi/lib/theme/layout'), loading: LoadingComponent}), dynamic({ loader: () => import(/* webpackChunkName: 'wrappers' */'/home/little/projects/rdms/front-rdms/node_modules/dumi-theme-default/es/layout.js'), loading: LoadingComponent})],
         "routes": [
           {
             "path": "/~docs",
-            "component": dynamic({ loader: () => import(/* webpackChunkName: 'README.md' */'/home/little/projects/front-rdms/README.md'), loading: LoadingComponent}),
+            "component": dynamic({ loader: () => import(/* webpackChunkName: 'README.md' */'/home/little/projects/rdms/front-rdms/README.md'), loading: LoadingComponent}),
             "exact": true,
             "meta": {
               "locale": "en-US",
               "order": null,
               "filePath": "README.md",
-              "updatedTime": 1635248867923,
+              "updatedTime": 1635250394000,
               "slugs": [
                 {
                   "depth": 1,
@@ -122,11 +122,11 @@ export function getRoutes() {
           },
           {
             "path": "/~docs/components",
-            "component": dynamic({ loader: () => import(/* webpackChunkName: 'components__index.md' */'/home/little/projects/front-rdms/src/components/index.md'), loading: LoadingComponent}),
+            "component": dynamic({ loader: () => import(/* webpackChunkName: 'components__index.md' */'/home/little/projects/rdms/front-rdms/src/components/index.md'), loading: LoadingComponent}),
             "exact": true,
             "meta": {
               "filePath": "src/components/index.md",
-              "updatedTime": 1635248867899,
+              "updatedTime": 1635250394000,
               "title": "业务组件",
               "sidemenu": false,
               "slugs": [
@@ -202,13 +202,13 @@ export function getRoutes() {
               {
                 "name": "login",
                 "path": "/user/login",
-                "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__user__Login' */'/home/little/projects/front-rdms/src/pages/user/Login'), loading: LoadingComponent}),
+                "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__user__Login' */'/home/little/projects/rdms/front-rdms/src/pages/user/Login'), loading: LoadingComponent}),
                 "exact": true
               }
             ]
           },
           {
-            "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__404' */'/home/little/projects/front-rdms/src/pages/404'), loading: LoadingComponent}),
+            "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__404' */'/home/little/projects/rdms/front-rdms/src/pages/404'), loading: LoadingComponent}),
             "exact": true
           }
         ]
@@ -217,7 +217,7 @@ export function getRoutes() {
         "path": "/welcome",
         "name": "welcome",
         "icon": "smile",
-        "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__Welcome' */'/home/little/projects/front-rdms/src/pages/Welcome'), loading: LoadingComponent}),
+        "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__Welcome' */'/home/little/projects/rdms/front-rdms/src/pages/Welcome'), loading: LoadingComponent}),
         "exact": true
       },
       {
@@ -225,17 +225,17 @@ export function getRoutes() {
         "name": "admin",
         "icon": "crown",
         "access": "canAdmin",
-        "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__Admin' */'/home/little/projects/front-rdms/src/pages/Admin'), loading: LoadingComponent}),
+        "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__Admin' */'/home/little/projects/rdms/front-rdms/src/pages/Admin'), loading: LoadingComponent}),
         "routes": [
           {
             "path": "/admin/sub-page",
             "name": "sub-page",
             "icon": "smile",
-            "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__Welcome' */'/home/little/projects/front-rdms/src/pages/Welcome'), loading: LoadingComponent}),
+            "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__Welcome' */'/home/little/projects/rdms/front-rdms/src/pages/Welcome'), loading: LoadingComponent}),
             "exact": true
           },
           {
-            "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__404' */'/home/little/projects/front-rdms/src/pages/404'), loading: LoadingComponent}),
+            "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__404' */'/home/little/projects/rdms/front-rdms/src/pages/404'), loading: LoadingComponent}),
             "exact": true
           }
         ]
@@ -244,7 +244,7 @@ export function getRoutes() {
         "name": "list.table-list",
         "icon": "table",
         "path": "/list",
-        "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__TableList' */'/home/little/projects/front-rdms/src/pages/TableList'), loading: LoadingComponent}),
+        "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__TableList' */'/home/little/projects/rdms/front-rdms/src/pages/TableList'), loading: LoadingComponent}),
         "exact": true
       },
       {
@@ -258,7 +258,7 @@ export function getRoutes() {
         "exact": true
       },
       {
-        "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__404' */'/home/little/projects/front-rdms/src/pages/404'), loading: LoadingComponent}),
+        "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__404' */'/home/little/projects/rdms/front-rdms/src/pages/404'), loading: LoadingComponent}),
         "exact": true
       }
     ]

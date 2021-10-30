@@ -5,8 +5,8 @@ import '../global.tsx';
 import { plugin } from './core/plugin';
 import './core/pluginRegister';
 import { createHistory } from './core/history';
-import { ApplyPluginsType } from '/home/little/projects/front-rdms/node_modules/umi/node_modules/@umijs/runtime';
-import { renderClient } from '/home/little/projects/front-rdms/node_modules/@umijs/renderer-react';
+import { ApplyPluginsType } from '/home/little/projects/rdms/front-rdms/node_modules/umi/node_modules/@umijs/runtime';
+import { renderClient } from '/home/little/projects/rdms/front-rdms/node_modules/@umijs/renderer-react';
 import { getRoutes } from './core/routes';
 
 
