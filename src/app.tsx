@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2021-10-31 06:40:33
+ * @LastEditTime: 2021-10-31 08:53:13
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /front-rdms/src/app.tsx
+ */
 import type { Settings as LayoutSettings } from '@ant-design/pro-layout';
 import { PageLoading } from '@ant-design/pro-layout';
 import type { RunTimeLayoutConfig } from 'umi';
@@ -50,6 +58,22 @@ export async function getInitialState(): Promise<{
 // ProLayout 支持的api https://procomponents.ant.design/components/layout
 export const layout: RunTimeLayoutConfig = ({ initialState }) => {
   return {
+    /* custom */
+    menuItemRender: (menuItemProps, defaultDom) => {
+      if (
+        menuItemProps.isUrl || !menuItemProps.path) {
+        return defaultDom;
+      }
+      // 支持二级菜单显示icon
+      return (
+        <Link to={menuItemProps.path}>
+          {menuItemProps.pro_layout_parentKeys
+            && menuItemProps.pro_layout_parentKeys.length > 0 &&
+            menuItemProps.icon}{defaultDom}
+        </Link>
+      );
+    },
+    /* original */
     rightContentRender: () => <RightContent />,
     disableContentMargin: false,
     waterMarkProps: {
@@ -65,15 +89,15 @@ export const layout: RunTimeLayoutConfig = ({ initialState }) => {
     },
     links: isDev
       ? [
-          <Link to="/umi/plugin/openapi" target="_blank">
-            <LinkOutlined />
-            <span>OpenAPI 文档</span>
-          </Link>,
-          <Link to="/~docs">
-            <BookOutlined />
-            <span>业务组件文档</span>
-          </Link>,
-        ]
+        <Link to="/umi/plugin/openapi" target="_blank">
+          <LinkOutlined />
+          <span>OpenAPI 文档</span>
+        </Link>,
+        <Link to="/~docs">
+          <BookOutlined />
+          <span>业务组件文档</span>
+        </Link>,
+      ]
       : [],
     menuHeaderRender: undefined,
     // 自定义 403 页面
