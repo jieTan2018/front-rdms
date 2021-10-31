@@ -1,11 +1,3 @@
-/*
- * @Author: jieTan
- * @Date: 2021-10-26 11:47:47
- * @LastEditTime: 2021-10-26 12:53:47
- * @LastEditors: Please set LastEditors
- * @Description: In User Settings Edit
- * @FilePath: /front-rdms/src/locales/zh-CN/pages.ts
- */
 export default {
   'pages.layouts.userLayout.title': 'Ant Design 是西湖区最具影响力的 Web 设计规范',
   'pages.login.accountLogin.tab': '账户密码登录',
@@ -14,7 +6,7 @@ export default {
   'pages.login.success': '登录成功！',
   'pages.login.username.placeholder': '用户名: admin or user',
   'pages.login.username.required': '用户名是必填项！',
-  'pages.login.password.placeholder': '密码: 123456',
+  'pages.login.password.placeholder': '密码: ant.design',
   'pages.login.password.required': '密码是必填项！',
   'pages.login.phoneLogin.tab': '手机号登录',
   'pages.login.phoneLogin.errorMessage': '验证码错误',
