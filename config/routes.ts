@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: jieTan
  * @Date: 2021-10-31 06:40:33
- * @LastEditTime: 2021-11-13 08:06:46
+ * @LastEditTime: 2021-11-14 02:51:23
  * @LastEditors: jieTan
  * @LastModify: 
  */
@@ -36,6 +36,12 @@ const SprintRoutes: RouteType = {
       path: "projects",
       icon: "ProfileOutlined",
       component:"./sprint/ProjectList",
+    },
+    {
+      name: "列表明细",
+      path: "projects/detail",
+      icon: "UnorderedListOutlined",
+      component:"./sprint/ProjectList/PlDetail",
     },
   ],
 };

@@ -238,6 +238,13 @@ export function getRoutes() {
             "icon": "ProfileOutlined",
             "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__sprint__ProjectList' */'/home/little/projects/rdms/front-rdms/src/pages/sprint/ProjectList'), loading: LoadingComponent}),
             "exact": true
+          },
+          {
+            "name": "列表明细",
+            "path": "/sprint/projects/detail",
+            "icon": "UnorderedListOutlined",
+            "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__sprint__ProjectList__PlDetail' */'/home/little/projects/rdms/front-rdms/src/pages/sprint/ProjectList/PlDetail'), loading: LoadingComponent}),
+            "exact": true
           }
         ]
       },
