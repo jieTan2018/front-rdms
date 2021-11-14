@@ -193,38 +193,6 @@ export function getRoutes() {
         "component": (props) => props.children
       },
       {
-        "name": "sprint工作台",
-        "path": "/sprint",
-        "icon": "TrophyOutlined",
-        "routes": [
-          {
-            "name": "dashboard",
-            "path": "/sprint/sprint/dashboard",
-            "icon": "DashboardOutlined",
-            "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__sprint__Dashboard' */'/home/little/projects/rdms/front-rdms/src/pages/sprint/Dashboard'), loading: LoadingComponent}),
-            "exact": true
-          },
-          {
-            "name": "项目列表",
-            "path": "/sprint/projects",
-            "icon": "ProfileOutlined",
-            "exact": true
-          }
-        ]
-      },
-      {
-        "name": "研发过程数据",
-        "path": "/evaluation",
-        "icon": "FundProjectionScreenOutlined",
-        "exact": true
-      },
-      {
-        "name": "检查工具",
-        "path": "/tool",
-        "icon": "ToolOutlined",
-        "exact": true
-      },
-      {
         "path": "/user",
         "layout": false,
         "routes": [
@@ -250,6 +218,39 @@ export function getRoutes() {
         "name": "欢迎",
         "icon": "smile",
         "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__Welcome' */'/home/little/projects/rdms/front-rdms/src/pages/Welcome'), loading: LoadingComponent}),
+        "exact": true
+      },
+      {
+        "name": "sprint工作台",
+        "path": "/sprint",
+        "icon": "TrophyOutlined",
+        "routes": [
+          {
+            "name": "dashboard",
+            "path": "/sprint/sprint/dashboard",
+            "icon": "DashboardOutlined",
+            "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__sprint__Dashboard' */'/home/little/projects/rdms/front-rdms/src/pages/sprint/Dashboard'), loading: LoadingComponent}),
+            "exact": true
+          },
+          {
+            "name": "项目列表",
+            "path": "/sprint/projects",
+            "icon": "ProfileOutlined",
+            "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__sprint__ProjectList' */'/home/little/projects/rdms/front-rdms/src/pages/sprint/ProjectList'), loading: LoadingComponent}),
+            "exact": true
+          }
+        ]
+      },
+      {
+        "name": "研发过程数据",
+        "path": "/evaluation",
+        "icon": "FundProjectionScreenOutlined",
+        "exact": true
+      },
+      {
+        "name": "检查工具",
+        "path": "/tool",
+        "icon": "ToolOutlined",
         "exact": true
       },
       {

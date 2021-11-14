@@ -1,3 +1,11 @@
+/*
+ * @Description: 
+ * @Author: jieTan
+ * @Date: 2021-10-31 06:40:33
+ * @LastEditTime: 2021-11-13 08:06:46
+ * @LastEditors: jieTan
+ * @LastModify: 
+ */
 type RouteType = {
   name?: string;
   path?: string;
@@ -27,6 +35,7 @@ const SprintRoutes: RouteType = {
       name: "项目列表",
       path: "projects",
       icon: "ProfileOutlined",
+      component:"./sprint/ProjectList",
     },
   ],
 };
@@ -44,9 +53,6 @@ const ToolRoutes: RouteType = {
 };
 
 export default [
-  SprintRoutes,
-  EvaluationRoutes,
-  ToolRoutes,
   {
     path: "/user",
     layout: false,
@@ -59,6 +65,9 @@ export default [
     ],
   },
   { path: "/welcome", name: "欢迎", icon: "smile", component: "./Welcome" },
+  SprintRoutes,
+  EvaluationRoutes,
+  ToolRoutes,
   {
     path: "/admin",
     name: "管理页",
